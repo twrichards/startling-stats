@@ -1,0 +1,29 @@
+{
+  "name": "startling-stats",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/react-color": "^2.13.6",
+    "@types/react-countup": "^4.0.0",
+    "emotion": "^9.2.12",
+    "react": "^16.6.3",
+    "react-color": "^2.14.1",
+    "react-countup": "^4.0.0",
+    "react-dom": "^16.6.3",
+    "react-scripts-ts": "3.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject",
+    "fix": "tslint --fix -p ."
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.9",
+    "@types/node": "^10.12.10",
+    "@types/react": "^16.7.7",
+    "@types/react-dom": "^16.0.10",
+    "typescript": "^3.1.6"
+  }
+}

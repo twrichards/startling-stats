@@ -1,0 +1,1 @@
+HackDay(s) project to simulate projecting impactful stats onto significant buildings/landmarks
