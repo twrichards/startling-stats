@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/base-64": "^0.1.2",
     "@types/react-color": "^2.13.6",
     "@types/react-countup": "^4.0.0",
+    "base-64": "^0.1.0",
     "emotion": "^9.2.12",
     "react": "^16.6.3",
     "react-color": "^2.14.1",

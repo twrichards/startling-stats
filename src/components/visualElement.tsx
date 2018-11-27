@@ -1,5 +1,6 @@
 import {css} from "emotion";
 import * as React from 'react';
+import {RGBColor} from "react-color";
 import {Ticker} from "./ticker";
 
 export interface VisualElementProps {
@@ -11,31 +12,31 @@ export interface VisualElementProps {
   top: number;
   rotateX: number;
   rotateY: number;
-  backgroundColor: string;
+  backgroundColor: RGBColor;
   color: string;
+  fontSize: number;
   body?: JSX.Element;
-  fontSize?: number;
+  selected?: boolean;
+  onClick?: () => void;
 }
 
 export const VisualElement = (props: VisualElementProps) => (
-  <div className={css`
-    position: absolute;
-    top: ${props.top}%;
-    left: ${props.left}%;
-    color: ${props.color};
-    width: ${props.width}%;
-    height: ${props.height}%;
-    opacity: ${props.opacity};
-    transform: rotateX(${props.rotateX}deg) rotateY(${props.rotateY}deg);
-    font-size: ${props.fontSize || 24}px;
-  `}>
-    <div className={css`
+  <div
+    className={css`
       position: absolute;
-      background: ${props.backgroundColor};
-      width: 100%;
-      height: 100%;
-      opacity: ${props.opacity/2};
-    `}/>
+      top: ${props.top}%;
+      left: ${props.left}%;
+      color: ${props.color};
+      width: ${props.width}%;
+      height: ${props.height}%;
+      opacity: ${props.opacity};
+      transform: rotateX(${props.rotateX}deg) rotateY(${props.rotateY}deg);
+      font-size: ${props.fontSize}px;
+      background: rgba(${props.backgroundColor.r},${props.backgroundColor.g},${props.backgroundColor.b},${props.backgroundColor.a});
+      cursor: pointer;
+      border: red 2px ${props.selected ? "dashed" : "none"}
+    `}
+    onClick={props.onClick}>
     {props.body}
     <div className={css`
       position: absolute;
